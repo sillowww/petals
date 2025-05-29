@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   ...
 }:
 
@@ -21,6 +22,7 @@
       format_on_save = "on";
       theme = {
         mode = "system";
+        light = lib.mkForce "Catppuccin Latte";
       };
 
       auto_update = false;
