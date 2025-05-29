@@ -7,6 +7,7 @@
       package = pkgs.nix-ld-rs;
     };
 
+    dconf.enable = true;
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
