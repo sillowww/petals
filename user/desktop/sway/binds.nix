@@ -64,6 +64,11 @@ in
         lib.mapAttrsToList (ws: output: "workspace ${ws} output ${output}") workspaces
       )}
 
+      input type:keyboard {
+          xkb_layout gb
+          xkb_options caps:ctrl_modifier,
+      }
+
       # meow
       bindsym ${super}+Shift+e kill
       bindsym ${super}+Shift+c reload;
@@ -105,6 +110,10 @@ in
       bindsym --locked XF86AudioNext exec playerctl next
       bindsym --locked XF86AudioPrev exec playerctl previous
       bindsym --locked XF86AudioStop exec playerctl stop
+
+      bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+      bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+      bindsym --locked XF86AudioMicMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     '';
   };
 }

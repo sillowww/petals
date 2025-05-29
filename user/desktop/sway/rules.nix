@@ -2,6 +2,7 @@
 {
   wayland.windowManager.sway = {
     extraConfig = lib.mkAfter ''
+      for_window [class="Civ6"] floating enable, fullscreen enable
       for_window [window_role = "pop-up"] floating enable
       for_window [window_role = "bubble"] floating enable
       for_window [window_role = "dialog"] floating enable

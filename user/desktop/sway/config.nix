@@ -23,12 +23,8 @@ in
     wrapperFeatures.gtk = true;
     checkConfig = false;
 
-    # extraConfig = lib.concatStringsSep "\n" (
-    #   lib.mapAttrsToList (ws: output: "workspace ${ws} output ${output}") workspaces
-    # );
-
     extraConfig = lib.concatStringsSep "\n" (
-    lib.mapAttrsToList (ws: output: "workspace ${ws} output ${output}") workspaces
+      lib.mapAttrsToList (ws: output: "workspace ${ws} output ${output}") workspaces
     );
   };
 }
