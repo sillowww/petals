@@ -7,7 +7,7 @@
 
     settings = {
       main = {
-        font = "Zed Mono";
+        font = "ZedMono NF";
         pad = "4x4";
       };
       cursor = {
