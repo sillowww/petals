@@ -9,6 +9,7 @@
     zellij
     dmenu
     imagemagick
+    swww
 
     gdk-pixbuf
     libwebp
