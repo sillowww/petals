@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 {
   programs.foot = {
     enable = true;
@@ -7,12 +6,14 @@
 
     settings = {
       main = {
-        font = "ZedMono NF";
+        font = "ZedMono NF Extd Med";
         pad = "4x4";
       };
       cursor = {
         style = "beam";
-        color = "eff1f5 dc8a78";
+      };
+      colors = {
+        alpha = 0.975;
       };
     };
   };
