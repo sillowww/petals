@@ -22,6 +22,9 @@
         defaultCursor = "Adwaita";
       };
     };
+    sessionVariables = {
+      XDG_DESKTOP_PORTAL = "wlr";
+    };
   };
 
   dconf.settings = {
