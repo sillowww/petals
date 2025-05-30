@@ -3,6 +3,8 @@
   imports = [
     ./vesktop
     ./zed.nix
+    ./foot.nix
+    ./games.nix
   ];
 
   home.packages = with pkgs; [
