@@ -1,3 +1,6 @@
 {
-  imports = [ ./sway ];
+  imports = [
+    ./sway
+    ./waybar
+  ];
 }

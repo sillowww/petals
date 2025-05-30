@@ -19,9 +19,12 @@ in
 {
   wayland.windowManager.sway = {
     enable = true;
+    systemd.enable = true;
     package = pkgs.swayfx;
     wrapperFeatures.gtk = true;
     checkConfig = false;
+
+    config.bars = [ ];
 
     extraConfig = lib.concatStringsSep "\n" (
       lib.mapAttrsToList (ws: output: "workspace ${ws} output ${output}") workspaces

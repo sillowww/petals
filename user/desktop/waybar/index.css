@@ -1,0 +1,105 @@
+* {
+    border: none;
+    border-radius: 6px;
+    font-family: "ZedMono NF", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @text;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.module {
+    border-radius: 200px;
+    background: alpha(@base, 0.5);
+    border: 1px solid @surface2;
+}
+
+#workspaces,
+#window,
+#mpris,
+#clock,
+#network,
+#pulseaudio,
+#tray {
+    color: inherit;
+    padding: 0 10px;
+    margin: 2px 4px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#mpris.playing {
+    font-weight: bold;
+    background: alpha(mix(@base, @green, 0.5), 0.5);
+    border: 1px solid alpha(@green, 0.5);
+}
+
+#mpris.paused {
+    font-style: italic;
+}
+
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: @subtext0;
+    border-radius: 4px;
+    padding: 0 8px;
+    margin: 0 2px;
+}
+
+#workspaces button.active {
+    background: alpha(@surface0, 0.8);
+    color: @blue;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background: alpha(@red, 0.8);
+    color: @crust;
+}
+
+#workspaces button:hover {
+    background: alpha(@surface1, 0.8);
+    color: @rosewater;
+}
+
+#clock {
+    color: @peach;
+    font-weight: bold;
+}
+
+#network {
+    color: @sky;
+}
+
+#pulseaudio {
+    color: @green;
+}
+
+#tray {
+    color: @text;
+    padding-right: 8px;
+}
+
+#mpd {
+    color: @pink;
+}
+
+#window {
+    color: @lavender;
+}
+
+tooltip {
+    background: @mantle;
+    color: @text;
+    border-radius: 6px;
+    border: 1px solid @surface2;
+}

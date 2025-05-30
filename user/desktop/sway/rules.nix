@@ -22,6 +22,9 @@
       for_window [title = "Firefox — Sharing Indicator"] kill
       for_window [title = "librewolf - Sharing Indicator"] kill
       for_window [title = "librewolf — Sharing Indicator"] kill
+
+      for_window [app_id = "foot"] floating enable, resize set width 800px height 600px
+      layer_effects "waybar" blur enable; blur_ignore_transparent true
     '';
   };
 }

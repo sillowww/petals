@@ -15,7 +15,7 @@
 
     gaps inner 4
     gaps outer 2
-    smart_gaps on
+    smart_gaps off
 
     default_border none
     default_floating_border none
@@ -31,11 +31,5 @@
     shadows enable
     shadow_color #00000040
     shadow_inactive_color #00000033
-
-    layer_effects "moe.iri.swaync.overlay" blur enable; blur_ignore_transparent enable
-    layer_effects "swaync-notification-window" blur enable; blur_ignore_transparent enable
-    layer_effects "swaync-control-center" blur enable; blur_ignore_transparent enable
-    layer_effects "swayosd" blur enable; blur_ignore_transparent enable
-    layer_effects "sylph" blur enable; blur_ignore_transparent enable
   '';
 }

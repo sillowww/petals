@@ -10,6 +10,8 @@
     dmenu
     imagemagick
     swww
+    waybar
+    waybar-mpris
 
     gdk-pixbuf
     libwebp
