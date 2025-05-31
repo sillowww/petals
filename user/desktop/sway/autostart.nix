@@ -3,7 +3,6 @@
   wayland.windowManager.sway = {
     extraConfig = lib.mkAfter ''
       exec ${pkgs.swww}/bin/swww-daemon && _random-wallpaper
-      exec ${pkgs.waybar}/bin/waybar
       exec systemctl --user import-environment PATH && systemctl --user restart xdg-desktop-portal.service
 
       exec swaymsg "workspace 3; exec zeditor;"; assign [class="dev.zed.Zed"] 1
