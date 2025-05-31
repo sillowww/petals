@@ -3,7 +3,10 @@ let
   programs = {
     term = "foot";
     menu = "dmenu_run";
-    screenshot = "grim -g \"$(slurp)\"";
+    screenshot = {
+      default = "~/.local/bin/_screenshot";
+      noCandy = "~/.local/bin/_screenshot --radius 0 --padding 0 --no-shadow";
+    };
   };
 
   workspaces = lib.genAttrs (map toString (lib.range 1 9)) (
