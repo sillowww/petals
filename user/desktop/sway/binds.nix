@@ -5,7 +5,8 @@ let
     menu = "dmenu_run";
     screenshot = {
       default = "~/.local/bin/_screenshot";
-      noCandy = "~/.local/bin/_screenshot --radius 0 --padding 0 --no-shadow";
+      simple = "~/.local/bin/_screenshot --radius 0 --padding 0 --no-shadow";
+      window = "~/.local/bin/_screenshot --window";
     };
   };
 
@@ -106,8 +107,8 @@ in
       # launch things
       bindsym ${super}+t exec ${programs.term}
       bindsym ${super}+d exec ${programs.menu}
-      bindsym ${super}+Shift+d exec ${programs.screenshot.default}
-      bindsym ${super}+Ctrl+d exec ${programs.screenshot.noCandy}
+      bindsym ${super}+Shift+d exec ${programs.screenshot.simple}
+      bindsym ${super}+Ctrl+d exec ${programs.screenshot.window}
 
       # media
       bindsym --locked XF86AudioPlay exec playerctl play-pause
