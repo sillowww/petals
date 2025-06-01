@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    bun
+    (callPackage ./bun-baseline.nix { }) # my poor cpu is too old for `pkgs.bun`.
     deno
     nodejs_latest
 

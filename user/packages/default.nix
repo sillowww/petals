@@ -13,6 +13,9 @@
     waybar
     waybar-mpris
 
+    grim
+    slurp
+
     gdk-pixbuf
     libwebp
     webp-pixbuf-loader
