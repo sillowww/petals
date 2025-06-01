@@ -29,15 +29,15 @@ HEIGHT=$(magick identify -format "%h" "$DIR/$FILENAME")
 
 if [[ "$RADIUS" -eq 0 ]]; then
   magick "$DIR/$FILENAME" \
-    \( -size ${WIDTH}x${HEIGHT} xc:none -draw "fill white rectangle 0,0 $((WIDTH-1)),$((HEIGHT-1))" \) \
+    \( -size "${WIDTH}"x"${HEIGHT}" xc:none -draw "fill white rectangle 0,0 $((WIDTH-1)),$((HEIGHT-1))" \) \
     -alpha off -compose CopyOpacity -composite "$DIR/$FILENAME"
 else
   magick "$DIR/$FILENAME" \
-    \( -size ${WIDTH}x${HEIGHT} xc:none -draw "fill white roundrectangle 0,0 $((WIDTH-1)),$((HEIGHT-1)) $RADIUS,$RADIUS" \) \
+    \( -size "${WIDTH}"x"${HEIGHT}" xc:none -draw "fill white roundrectangle 0,0 $((WIDTH-1)),$((HEIGHT-1)) $RADIUS,$RADIUS" \) \
     -alpha off -compose CopyOpacity -composite "$DIR/$FILENAME"
 fi
 
-magick "$DIR/$FILENAME" -bordercolor none -border ${PADDING} "$DIR/$FILENAME"
+magick "$DIR/$FILENAME" -bordercolor none -border "${PADDING}" "$DIR/$FILENAME"
 
 if [[ "$SHADOW" -eq 1 ]]; then
   magick "$DIR/$FILENAME" \

@@ -106,7 +106,8 @@ in
       # launch things
       bindsym ${super}+t exec ${programs.term}
       bindsym ${super}+d exec ${programs.menu}
-      bindsym ${super}+Shift+d exec ${programs.screenshot}
+      bindsym ${super}+Shift+d exec ${programs.screenshot.default}
+      bindsym ${super}+Ctrl+d exec ${programs.screenshot.noCandy}
 
       # media
       bindsym --locked XF86AudioPlay exec playerctl play-pause

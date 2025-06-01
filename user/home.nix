@@ -6,6 +6,7 @@
     ./packages
     ./programs
     ./desktop
+    ./scripts
   ];
   programs.home-manager.enable = true;
 
@@ -25,6 +26,11 @@
     sessionVariables = {
       XDG_DESKTOP_PORTAL = "wlr";
     };
+
+    file.".ssh/allowed_signers".text = ''
+      willow ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPWD6wk95qNhk/36vEH34qIRp/TPCcQ+D+u5Xd9/N0m1
+    '';
+
   };
 
   dconf.settings = {
