@@ -45,6 +45,6 @@
       };
     };
 
-    style = lib.mkAfter (builtins.readFile ./index.css);
+    style = lib.mkAfter (builtins.readFile ./index.scss);
   };
 }

@@ -26,7 +26,7 @@ window#waybar {
 #network,
 #pulseaudio,
 #tray {
-    color: inherit;
+    color: @lavender;
     padding: 0 10px;
     margin: 2px 4px;
     font-weight: bold;
@@ -44,21 +44,33 @@ window#waybar {
 }
 
 #workspaces {
-    padding: 0 4px;
+    padding: 2px 1px;
 }
 
 #workspaces button {
+    all: unset;
     background: transparent;
     color: @subtext0;
-    border-radius: 4px;
-    padding: 0 8px;
-    margin: 0 2px;
+    padding: 0 12px;
+    margin: 0 1px;
+    border-radius: 200px;
+    transition: 0.2s;
 }
 
-#workspaces button.active {
-    background: alpha(@surface0, 0.8);
-    color: @blue;
+#workspaces button:hover {
+    background: alpha(@rosewater, 0.8);
+    color: @crust;
+}
+
+#workspaces button.focused {
+    background: alpha(@sky, 0.8);
+    color: @crust;
     font-weight: bold;
+}
+
+#workspaces button.focused:hover {
+    background: alpha(@sky, 1);
+    color: @crust;
 }
 
 #workspaces button.urgent {
@@ -66,40 +78,14 @@ window#waybar {
     color: @crust;
 }
 
-#workspaces button:hover {
-    background: alpha(@surface1, 0.8);
-    color: @rosewater;
-}
-
-#clock {
-    color: @peach;
-    font-weight: bold;
-}
-
-#network {
-    color: @sky;
-}
-
-#pulseaudio {
-    color: @green;
-}
-
 #tray {
-    color: @text;
     padding-right: 8px;
 }
 
-#mpd {
-    color: @pink;
-}
-
-#window {
-    color: @lavender;
-}
-
 tooltip {
+    all: unset;
     background: @mantle;
     color: @text;
-    border-radius: 6px;
+    border-radius: 200px;
     border: 1px solid @surface2;
 }
