@@ -41,7 +41,18 @@
           };
           player = "spotify";
         };
+      };
 
+      otherBar = {
+        name = "otherBar";
+        layer = "bottom";
+        position = "bottom";
+        height = 4;
+        output = [ "HDMI-A-1" ];
+
+        modules-left = [
+          "sway/workspaces"
+        ];
       };
     };
 

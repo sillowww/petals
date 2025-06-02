@@ -13,6 +13,7 @@
     waybar
     waybar-mpris
 
+    quickemu
     grim
     slurp
 

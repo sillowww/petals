@@ -89,3 +89,41 @@ tooltip {
     border-radius: 200px;
     border: 1px solid @surface2;
 }
+
+#waybar.otherBar {
+    margin: 0;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+}
+
+#waybar.otherBar #workspaces {
+    border-radius: 0;
+    background: transparent;
+    border: none;
+}
+#waybar.otherBar #workspaces button {
+    all: unset;
+    border-radius: 256px;
+    color: transparent;
+    background: @base;
+    border: 1px solid @surface2;
+    padding: 0 32px;
+    margin: 0 2px;
+    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#waybar.otherBar #workspaces button:hover {
+    background: alpha(@rosewater, 0.8);
+    border: 1px solid @surface2;
+}
+
+#waybar.otherBar #workspaces button.visible {
+    background: @pink;
+    border: 1px solid @surface2;
+}
+
+#waybar.otherBar #workspaces button.focused {
+    background: @rosewater;
+    border: 1px solid @surface2;
+}
