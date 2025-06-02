@@ -39,6 +39,7 @@
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   networking = {
     networkmanager.enable = true;
@@ -60,5 +61,4 @@
       ];
     };
   };
-
 }
