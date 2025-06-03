@@ -10,6 +10,7 @@
       ];
       specialArgs = {
         inherit inputs;
+        hostname = "dahlia";
         inputs' = builtins.mapAttrs (_: flake: {
           legacyPackages = flake.legacyPackages."x86_64-linux" or { };
           packages = flake.packages."x86_64-linux" or { };
@@ -22,9 +23,11 @@
       modules = [
         ./azalea
         ./azalea/_hware-config.nix
+        inputs.home-manager.nixosModules.home-manager
       ];
       specialArgs = {
         inherit inputs;
+        hostname = "azalea";
         inputs' = builtins.mapAttrs (_: flake: {
           legacyPackages = flake.legacyPackages."aarch64-linux" or { };
           packages = flake.packages."aarch64-linux" or { };

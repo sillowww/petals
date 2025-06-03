@@ -3,6 +3,7 @@
   self',
   inputs,
   inputs',
+  hostname,
   ...
 }:
 {
@@ -18,6 +19,7 @@
         self'
         inputs
         inputs'
+        hostname
         ;
     };
   };

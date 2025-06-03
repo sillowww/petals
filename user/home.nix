@@ -1,6 +1,5 @@
-{ config, pkgs, ... }:
+{ hostname, pkgs, ... }:
 let
-  hostname = config.networking.hostName or "unknown";
   isDesktop = hostname == "dahlia";
 in
 {

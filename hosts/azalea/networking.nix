@@ -2,7 +2,7 @@
   networking = {
     wireless = {
       enable = true;
-      networks."vodafoneCFC194".psk = builtins.readFile ./wifi-psk;
+      networks."vodafoneCFC194".psk = builtins.getEnv "WIFI_PSK";
       interfaces = [ "wlan0" ];
     };
   };
