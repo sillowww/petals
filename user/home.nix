@@ -1,4 +1,9 @@
-{ hostname, pkgs, ... }:
+{
+  hostname,
+  pkgs,
+  lib,
+  ...
+}:
 let
   isDesktop = hostname == "dahlia";
 in
@@ -26,7 +31,7 @@ in
     username = "willow";
     homeDirectory = "/home/willow";
     stateVersion = "25.11";
-    pointerCursor = {
+    pointerCursor = lib.mkIf {
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
       size = 24;
@@ -35,7 +40,7 @@ in
         defaultCursor = "Adwaita";
       };
     };
-    sessionVariables = {
+    sessionVariables = lib.mkIf {
       XDG_DESKTOP_PORTAL = "wlr";
     };
 
@@ -45,13 +50,13 @@ in
 
   };
 
-  dconf.settings = {
+  dconf.settings = lib.mkIf {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
     };
   };
 
-  gtk = {
+  gtk = lib.mkIf {
     enable = true;
     theme = {
       name = "Adwaita-dark";
