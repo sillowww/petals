@@ -2,7 +2,13 @@
 
 {
   home.packages = with pkgs; [
-    (callPackage ./bun-baseline.nix { }) # my poor cpu is too old for `pkgs.bun`.
+    (
+      if pkgs.stdenv.hostPlatform.system == "x86_64-linux" then
+        # my poor cpu is too old for `pkgs.bun`.
+        (callPackage ./bun-baseline.nix { })
+      else
+        bun
+    )
     deno
     nodejs_latest
 
