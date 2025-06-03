@@ -5,7 +5,6 @@ in
 {
   imports =
     [
-      ./ctp.nix
       ./packages
       ./programs
       ./scripts
@@ -14,6 +13,7 @@ in
       if isDesktop then
         [
           ./apps
+          ./ctp.nix
           ./desktop
         ]
       else
