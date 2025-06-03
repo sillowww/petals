@@ -16,5 +16,20 @@
         }) inputs;
       };
     };
+
+    azalea = inputs.nixpkgs.lib.nixosSystem {
+      system = "aarch64-linux";
+      modules = [
+        ./azalea
+        ./azalea/_hware-config.nix
+      ];
+      specialArgs = {
+        inherit inputs;
+        inputs' = builtins.mapAttrs (_: flake: {
+          legacyPackages = flake.legacyPackages."aarch64-linux" or { };
+          packages = flake.packages."aarch64-linux" or { };
+        }) inputs;
+      };
+    };
   };
 }

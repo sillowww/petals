@@ -1,13 +1,26 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
+let
+  hostname = config.networking.hostName or "unknown";
+  isDesktop = hostname == "dahlia";
+in
 {
-  imports = [
-    ./ctp.nix
-    ./apps
-    ./packages
-    ./programs
-    ./desktop
-    ./scripts
-  ];
+  imports =
+    [
+      ./ctp.nix
+      ./packages
+      ./programs
+      ./scripts
+    ]
+    ++ (
+      if isDesktop then
+        [
+          ./apps
+          ./desktop
+        ]
+      else
+        [ ]
+    );
+
   programs.home-manager.enable = true;
 
   home = {

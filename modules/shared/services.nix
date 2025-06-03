@@ -18,6 +18,7 @@
     gnome.gnome-keyring.enable = true;
     mpd.enable = true;
     printing.enable = true;
+    openssh.enable = true;
 
     pulseaudio.enable = false;
     pipewire = {
