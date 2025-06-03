@@ -1,6 +1,6 @@
 {
   networking = {
-    hostname = "azalea";
+    hostName = "azalea";
     wireless = {
       enable = true;
       networks."vodafoneCFC194".psk = builtins.getEnv "WIFI_PSK";
