@@ -15,6 +15,7 @@
     wget
     neofetch
     git
+    home-manager
   ];
 
   users = {
