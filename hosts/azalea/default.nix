@@ -41,4 +41,9 @@
     ];
   };
 
+  services.openssh.ports = [
+    22
+    2222
+  ];
+
 }
