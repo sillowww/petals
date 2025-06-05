@@ -40,7 +40,7 @@ in
     enable = true;
     email = "hai@wlo.moe";
     virtualHosts = pdsVirtualHosts;
-    extraConfig = ''
+    globalConfig = ''
         on_demand_tls {
       		ask http://localhost:8090/tls-check
        	}
