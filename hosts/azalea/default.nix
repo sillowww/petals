@@ -6,6 +6,7 @@
   imports = [
     ../../modules/shared
     ../../user
+    ./atproto-pds.nix
     ./core.nix
     ./networking.nix
   ];
