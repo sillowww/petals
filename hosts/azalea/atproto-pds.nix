@@ -12,7 +12,7 @@ let
 
   pdsHostnames = [
     "pds.wlo.moe"
-    "*.wlo.moe"
+    "*.pds.wlo.moe"
   ];
 
   pdsVirtualHosts = lib.listToAttrs (
