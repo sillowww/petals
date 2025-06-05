@@ -2,10 +2,6 @@
 let
   mkPdsVhost = hostName: {
     inherit hostName;
-    tls = "on_demand";
-    reverseProxy = {
-      to = "localhost:8090";
-    };
     extraConfig = ''
       tls {
         on_demand
