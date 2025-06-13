@@ -13,10 +13,10 @@ refresh_cache() {
             -o -name .cargo -o -name .npm -o -name .yarn -o -name .local \
             -o -name .mozilla -o -name .thumbnails -o -name .steam \
             -o -name .var -o -name .android -o -name .vscode \
-            -o -name .conda -o -name .miniconda* -o -name .pyenv \
+            -o -name .conda -o -name ".miniconda*" -o -name .pyenv \
             -o -name .rbenv -o -name .gem -o -name .bundle \
-            -o -name .snap -o -name .Trash* -o -name .wine \
-            -o -name .VirtualBox* -o -name .docker -o -name .gvfs \
+            -o -name .snap -o -name ".Trash*" -o -name .wine \
+            -o -name ".VirtualBox*" -o -name .docker -o -name .gvfs \
             -o -name .flatpak  -o -name .nextcloud \
             -o -name sessionData -o -name target -o -name .cargo-cache \
             -o -name BeeperTexts -o -name .thunderbird \
@@ -35,7 +35,7 @@ if [[ ! -s "$CACHE" ]]; then
     exit 1
 fi
 
-SELECTED=$(cat "$CACHE" | rofi -dmenu -i -p "open file/dir")
+SELECTED=$(rofi -dmenu -i -p "search..." < "$CACHE")
 
 if [[ -n "$SELECTED" ]]; then
     if command -v xdg-open >/dev/null; then
