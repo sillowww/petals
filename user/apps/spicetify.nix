@@ -12,15 +12,22 @@ in
 
   programs.spicetify = {
     enable = true;
+    wayland = true;
+
     theme = spicePkgs.themes.catppuccin;
     colorScheme = config.catppuccin.flavor;
     enabledExtensions = with spicePkgs.extensions; [
-      fullAppDisplay
       adblockify
       shuffle
       autoSkip
       powerBar
       autoVolume
+
+      history
+      simpleBeautifulLyrics
+    ];
+    enabledCustomApps = with spicePkgs.apps; [
+      lyricsPlus
     ];
   };
 }
