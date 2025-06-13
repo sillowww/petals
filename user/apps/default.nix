@@ -6,6 +6,8 @@
     ./foot.nix
     ./games.nix
     ./spicetify.nix
+    ./firefox.nix
+    ./obsidian.nix
   ];
 
   home.packages = with pkgs; [
@@ -17,7 +19,6 @@
     thunderbird
     nextcloud-client
     keepassxc
-    firefox
 
     obs-studio
     obs-studio-plugins.obs-vkcapture
