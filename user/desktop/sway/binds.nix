@@ -1,8 +1,8 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 let
   programs = {
     term = "foot";
-    menu = "dmenu_run";
+    menu = "${pkgs.rofi-wayland}/bin/rofi -show drun";
     screenshot = {
       default = "~/.local/bin/_screenshot";
       simple = "~/.local/bin/_screenshot --radius 0 --padding 0 --no-shadow";

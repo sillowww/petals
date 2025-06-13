@@ -24,8 +24,9 @@ in
     wrapperFeatures.gtk = true;
     checkConfig = false;
 
-    config.bars = [ ];
-
+    config = {
+      bars = [ ];
+    };
     extraConfig = lib.concatStringsSep "\n" (
       lib.mapAttrsToList (ws: output: "workspace ${ws} output ${output}") workspaces
     );
