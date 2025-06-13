@@ -53,6 +53,16 @@
         modules-left = [
           "sway/workspaces"
         ];
+
+        "sway/workspaces" = {
+          "persistent-workspaces" = {
+            "2" = [ ];
+            "4" = [ ];
+            "6" = [ ];
+            "8" = [ ];
+          };
+        };
+
       };
     };
 
