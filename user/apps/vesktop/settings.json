@@ -292,7 +292,7 @@
       "enabled": false
     },
     "NoOnboardingDelay": {
-      "enabled": false
+      "enabled": true
     },
     "NoPendingCount": {
       "enabled": false
@@ -337,19 +337,19 @@
       "enabled": false
     },
     "PermissionFreeWill": {
-      "enabled": false
+      "enabled": true
     },
     "PermissionsViewer": {
       "enabled": false
     },
     "petpet": {
-      "enabled": false
+      "enabled": true
     },
     "PictureInPicture": {
       "enabled": false
     },
     "PinDMs": {
-      "enabled": false
+      "enabled": true
     },
     "PlainFolderIcon": {
       "enabled": false
@@ -358,7 +358,7 @@
       "enabled": false
     },
     "PreviewMessage": {
-      "enabled": false
+      "enabled": true
     },
     "QuickMention": {
       "enabled": false
@@ -379,7 +379,7 @@
       "enabled": false
     },
     "ReplyTimestamp": {
-      "enabled": false
+      "enabled": true
     },
     "RevealAllSpoilers": {
       "enabled": false
@@ -406,7 +406,7 @@
       "enabled": false
     },
     "ServerListIndicators": {
-      "enabled": false
+      "enabled": true
     },
     "ShikiCodeblocks": {
       "enabled": false
@@ -472,7 +472,7 @@
       "enabled": false
     },
     "TypingTweaks": {
-      "enabled": false
+      "enabled": true
     },
     "Unindent": {
       "enabled": false
@@ -484,7 +484,7 @@
       "enabled": false
     },
     "UserMessagesPronouns": {
-      "enabled": false
+      "enabled": true
     },
     "UserVoiceShow": {
       "enabled": false
